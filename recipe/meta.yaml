@@ -1,5 +1,5 @@
 {% set name = "pyct-core" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyct/pyct-{{ version }}.tar.gz
-  sha256: ba0fb1bbb84b06fe9a56a31e57ffab059830ee47838bee2386a77a2be8b47619
+  sha256: df7b2d29f874cabdbc22e4f8cba2ceb895c48aa33da4e0fe679e89873e0a4c6e
 
 build:
   noarch: python
