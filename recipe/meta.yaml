@@ -1,5 +1,5 @@
 {% set name = "pyct-core" %}
-{% set version = "0.4.6" %}
+{% set version = "0.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyct/pyct-{{ version }}.tar.gz
-  sha256: df7b2d29f874cabdbc22e4f8cba2ceb895c48aa33da4e0fe679e89873e0a4c6e
+  sha256: 23d7525b5a1567535c093aea4b9c33809415aa5f018dd77f6eb738b1226df6f7
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   run_constrained:
@@ -35,7 +35,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Common tasks for package building (e.g. bundle examples)'
+  summary: Common tasks for package building (e.g. bundle examples)
   doc_url: https://github.com/pyviz/pyct#pyctbuild
   dev_url: https://github.com/pyviz/pyct
 
