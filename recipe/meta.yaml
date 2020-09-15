@@ -31,14 +31,14 @@ test:
     - pyct.build
 
 about:
-  home: https://github.com/pyviz/pyct
+  home: https://github.com/pyviz-dev/pyct
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: Common tasks for package building (e.g. bundle examples)
-  doc_url: https://github.com/pyviz/pyct#pyctbuild
-  dev_url: https://github.com/pyviz/pyct
+  doc_url: https://github.com/pyviz-dev/pyct
+  dev_url: https://github.com/pyviz-dev/pyct
 
 extra:
   recipe-maintainers:
-    - ceball
+    - jbednar
