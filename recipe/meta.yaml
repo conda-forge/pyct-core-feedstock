@@ -27,6 +27,9 @@ requirements:
   run:
     - python >=3.7
     - param >=1.7.0
+    # cli
+    - pyyaml
+    - requests
 
 test:
   imports:
