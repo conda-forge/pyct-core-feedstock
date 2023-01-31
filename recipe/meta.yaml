@@ -10,25 +10,32 @@ source:
   sha256: dd9f4ac5cbd8e37c352c04036062d3c5f67efec76d404761ef16b0cbf26aa6a0
 
 build:
+  entry_points:
+    - pyct=pyct.__main__:main
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   run_constrained:
     - pyct {{ version }}
   host:
-    - python
-    - pip
+    - python >=3.7
     - param >=1.7.0
+    - setuptools >=61.0
+    - pip
   run:
-    - python
+    - python >=3.7
     - param >=1.7.0
 
 test:
   imports:
     - pyct
-    - pyct.build
+  commands:
+    - pip check
+    - pyct --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/pyviz/pyct
